@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">Fortune Shop</div>
+            <button class="cart-button" onclick="toggleCart()">🛒 Cart</button>
+        </div>
+    </header>
+
+    <!-- Fortune Stats (Sticky on Scroll) -->
+    <div class="fortune-stats">
+        <p>Total Fortune: $283,100,000,000</p>
+        <p>Spent Fortune: $<span id="spent-amount">0</span></p>
+        <p>Spent Percentage: <span id="spent-percentage">0.000000000000</span>%</p>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <p class="description">Spend Billionair's Fortune!</p>
+        <p class="description2">Spend it as you want as you got their fortune</p>
+        <p class="description2">Don't forgot to checkout cart at the end!</p>
+        <!-- <img src="https://bsmedia.business-standard.com/_media/bs/img/article/2024-08/26/full/1724646602-549.jpg?im=FeatureCrop,size=(826,465)" alt="">
+        <p class="description">Total fortune of Elon and Trump are 283.1 billion USD.</p> -->
+
+        <div class="containerBox">
+            <div class="text-box">
+                <h4>Total fortune of Elon and Trump are 283.1 billion USD. </br> <span style="font-size: 25px;"> (Elon $274.70 bn. & Trump $6.6 bn.) </span> </h4>
+            </div>
+            <img class="img-responsive" src="https://bsmedia.business-standard.com/_media/bs/img/article/2024-08/26/full/1724646602-549.jpg?im=FeatureCrop,size=(1526,465)"/>
+        </div>
+
+
+        <div class="card-container">
+            <div class="card card-grey">
+                <h3>iPhone 16 Pro Max</h3>
+                <img class="product_image" src="https://cdn.vatanbilgisayar.com/Upload/PRODUCT/apple/thumb/141049-1-1_large.jpg" alt="iPhone Image">
+                <p>Price: $1868</p>
+                <div class="quantity">
+                    <button onclick="updateCart('iPhone', 1299, 'decrement')">-</button>
+                    <input type="number" id="iPhone-quantity" value="0" min="0" onchange="manualUpdate('iPhone', 1299)">
+                    <button onclick="updateCart('iPhone', 1299, 'increment')">+</button>
+                </div>
+            </div>
+            <div class="card card-red">
+                <h3>MacBook Pro 16' M3 Max</h3>
+                <img class="product_image" src="https://www.notebookcheck.net/fileadmin/_processed_/a/3/csm_IMG_1008_47c6b245b1.jpg" alt="MacBook Image">
+                <p>Price: $7699</p>
+                <div class="quantity">
+                    <button onclick="updateCart('MacBook', 4699, 'decrement')">-</button>
+                    <input type="number" id="MacBook-quantity" value="0" min="0" onchange="manualUpdate('MacBook', 4699)">
+                    <button onclick="updateCart('MacBook', 4699, 'increment')">+</button>
+                </div>
+            </div>
+            <div class="card card-blue">
+                <h3>Tesla Optimus</h3>
+                <img class="product_image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Tesla-optimus-bot-gen-2-scaled_%28cropped%29.jpg/440px-Tesla-optimus-bot-gen-2-scaled_%28cropped%29.jpg" alt="Tesla Optimus Image">
+                <p>Price: $20,000</p>
+                <div class="quantity">
+                    <button onclick="updateCart('Optimus', 20000, 'decrement')">-</button>
+                    <input type="number" id="Optimus-quantity" value="0" min="0" onchange="manualUpdate('Optimus', 20000)">
+                    <button onclick="updateCart('Optimus', 20000, 'increment')">+</button>
+                </div>
+            </div>
+            <div class="card card-grey">
+                <h3>Launch Satellite with Your Name</h3>
+                <img class="product_image" src="https://viasat.brightspotgocdn.com/dims4/default/dfd906b/2147483647/strip/true/crop/2121x1194+0+110/resize/2000x1126!/format/webp/quality/90/?url=https%3A%2F%2Fbrightspot-go-k1-viasat.s3.us-east-1.amazonaws.com%2Fbrightspot%2F9c%2Fa7%2F96eff8d24c6596401ecaf3a6da80%2Fhero-image-capabilities-of-geo-satellites.jpg" alt="Satellite Image">
+                <p>Price: $290,000,000</p>
+                <div class="quantity">
+                    <button onclick="updateCart('Satellite', 80000000, 'decrement')">-</button>
+                    <input type="number" id="Satellite-quantity" value="0" min="0" onchange="manualUpdate('Satellite', 80000000)">
+                    <button onclick="updateCart('Satellite', 80000000, 'increment')">+</button>
+                </div>
+            </div>
+            <div class="card card-red">
+                <h3>Influence 1 High Ranking Politician</h3>
+                <img class="product_image" src="https://thefulcrum.us/media-library/silhouette-of-an-american-democratic-politician-speaks-to-his-constituents-with-the-country-s-flag-on-the-left.jpg?id=53562407&width=1245&height=700&quality=85&coordinates=0%2C0%2C0%2C0" alt="Politician Influence Image">
+                <p>Price: $6,000,000</p>
+                <div class="quantity">
+                    <button onclick="updateCart('Influence', 2000000, 'decrement')">-</button>
+                    <input type="number" id="Influence-quantity" value="0" min="0" onchange="manualUpdate('Influence', 2000000)">
+                    <button onclick="updateCart('Influence', 2000000, 'increment')">+</button>
+                </div>
+            </div>
+            <div class="card card-blue">
+                <h3>Private Concert with Super Star</h3>
+                <img class="product_image" src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D" alt="Concert Image">
+                <p>Price: $15,000,000</p>
+                <div class="quantity">
+                    <button onclick="updateCart('Concert', 1000000, 'decrement')">-</button>
+                    <input type="number" id="Concert-quantity" value="0" min="0" onchange="manualUpdate('Concert', 1000000)">
+                    <button onclick="updateCart('Concert', 1000000, 'increment')">+</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <h2>Cart</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <tr><td colspan="3">No items in cart.</td></tr>
+                </tbody>
+            </table>
+            <div class="analytics">
+                <p>Total Spent: $<span id="modal-spent-amount">0</span></p>
+                <p>Remaining Fortune: $<span id="remaining-fortune">50000000000</span></p>
+                <p>Spent Percentage: <span id="modal-spent-percentage">0.000000000000</span>%</p>
+            </div>
+            <button onclick="toggleCart()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,269 @@
+/* General */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo {
+    font-size: 1.5em;
+}
+
+.cart-button {
+    background: none;
+    color: #fff;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+}
+
+.fortune-stats {
+    background-color: #b08b8b;
+    padding: 10px;
+    text-align: center;
+    position: sticky;
+    top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.description {
+    text-align: center;
+    font-size: 5.2em;
+    margin: 20px;
+}
+
+.description2 {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 20px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+/* Card Styling */
+.card {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 220px;
+    height: 350px;
+}
+
+.card-grey {
+    background: linear-gradient(145deg, #c0c0c0, #e0e0e0);
+}
+
+.card-red {
+    background: linear-gradient(145deg, #a84c4c, #b75f5f);
+}
+
+.card-blue {
+    background: linear-gradient(145deg, #6587d7, #627eae);
+}
+
+/* Modal */
+.cart-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-content {
+    background: #fff;
+    padding: 20px;
+    width: 60%;
+    border-radius: 8px;
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo {
+    font-size: 1.5em;
+}
+
+.cart-button {
+    background: none;
+    color: #fff;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 220px;
+    height: 350px;
+}
+
+.quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity input {
+    width: 40px;
+    text-align: center;
+}
+
+button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.cart-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 400px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+@media (max-width: 600px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.containerBox {
+    position: relative;
+    display: inline-block;
+ }
+
+ .text-box {
+    position: absolute;
+    height: 100%;
+    text-align: center;    
+    width: 100%;
+ }
+
+ .text-box:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+ }
+
+ h4 {
+    display: inline-block;
+    font-size: 35px; /*or whatever you want*/
+    color: #771a1a;   
+ }
+
+ h6 {
+    display: inline-block;
+    font-size: 25px; /*or whatever you want*/
+    color: #771a1a;   
+ }
+
+ .img-responsive {
+   display: block;
+   max-width: 100%;
+   height: auto;
+   opacity: 20%;
+ }
+
+ .product_image {
+    height: 200px;
+    width: 150px;
+ }
