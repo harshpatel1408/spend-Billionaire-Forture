@@ -89,8 +89,3 @@ document.addEventListener("keydown", function(event) {
         toggleCart();
     }
 });
-
-if ( window.self === window.top ) { 
-    // console.log("not in a frame") 
-       window.location.href = 'https://spend-billionaire-forture.com/';
-    }
