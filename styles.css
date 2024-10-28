@@ -44,18 +44,7 @@ header {
     top: 50px;
     display: flex;
     justify-content: space-around;
-}
-
-.description {
-    text-align: center;
-    font-size: 5.2em;
-    margin: 20px;
-}
-
-.description2 {
-    text-align: center;
-    font-size: 1.2em;
-    margin: 20px;
+    z-index: 9999;
 }
 
 .card-container {
@@ -100,6 +89,7 @@ header {
     background: rgba(0, 0, 0, 0.6);
     justify-content: center;
     align-items: center;
+    z-index: 99999999;
 }
 
 .cart-content {
@@ -225,45 +215,106 @@ th {
     }
 }
 
-.containerBox {
-    position: relative;
-    display: inline-block;
- }
-
- .text-box {
-    position: absolute;
-    height: 100%;
-    text-align: center;    
-    width: 100%;
- }
-
- .text-box:before {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
- }
-
- h4 {
-    display: inline-block;
-    font-size: 35px; /*or whatever you want*/
-    color: #771a1a;   
- }
-
- h6 {
-    display: inline-block;
-    font-size: 25px; /*or whatever you want*/
-    color: #771a1a;   
- }
-
- .img-responsive {
-   display: block;
-   max-width: 100%;
-   height: auto;
-   opacity: 20%;
- }
-
  .product_image {
     height: 200px;
     width: 150px;
  }
+
+ .description {
+    text-align: center;
+    font-size: 48px;
+    margin: 10px 0;
+    padding: 0 10px;
+}
+ 
+ .description2 {
+    text-align: center;
+    font-size: 18px;
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+.containerBox {
+    position: relative;
+    text-align: center;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.containerBox .text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.containerBox h4 {
+    color: white;
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+.containerBox img {
+    width: 100%;
+    height: auto;
+    opacity: 0.25;
+    border-radius: 8px;
+}
+
+.wealth {
+    font-size: 25px;
+}
+
+@media only screen and (max-width: 768px) {
+    .description {
+        font-size: 26px;
+    }
+    
+    .description2 {
+        font-size: 16px;
+    }
+
+    .containerBox h4 {
+        font-size: 18px;
+    }
+
+    .containerBox .text-box {
+        padding: 10px;
+    }
+
+    .wealth {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .description {
+        font-size: 24px;
+        padding: 0 5px;
+    }
+    
+    .description2 {
+        font-size: 14px;
+        padding: 0 5px;
+    }
+
+    .containerBox h4 {
+        font-size: 16px;
+    }
+
+    .containerBox .text-box {
+        padding: 8px;
+    }
+
+    .wealth {
+        font-size: 8px;
+    }
+}
