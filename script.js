@@ -9,7 +9,21 @@ let totalItems = {
     Optimus: 20000,
     Satellite: 290000000,
     iPhone: 1868,
-    
+    Cybertruck: 97990,
+    PrivateIsland: 75000000,
+    Superyacht: 8000000,
+    Artcollections: 2000000,
+    FundCountry: 250000000,
+    X: 44000000000,
+    'funding-political-movement':  1000000000,
+    Mansion: 500000000,
+    MovieStudio: 120000000,
+    MoonTour: 25000000,
+    PrivateJet: 660000000,
+    Kohinoor: 20000000000,
+    'jacob&co': 18000000,
+    GraffDiamondsHallucination: 55000000,
+    SpaceMission: 5000000000,
 }
 
 function updateCart(item, price, action) {

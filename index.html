@@ -46,13 +46,23 @@
 
         <div class="card-container">
             <div class="card card-grey">
+                <h3>Tesla Cybertruck</h3>
+                <img class="product_image" src="https://static-assets.tesla.com/configurator/compositor?context=design_studio_2&options=$MTC04,$WH0B,$IG04&view=STUD_FRONT34&model=ct&size=1920&bkba_opt=4&crop=0,0,0,0&overlay=0&" alt="Concert Image">
+                <p>Price: $97,990</p>
+                <div class="quantity">
+                    <button onclick="updateCart('Cybertruck', 97990, 'decrement')">-</button>
+                    <input type="number" id="Cybertruck-quantity" value="0" min="0" onchange="manualUpdate('Cybertruck', 97990)">
+                    <button onclick="updateCart('Cybertruck', 97990, 'increment')">+</button>
+                </div>
+            </div>
+            <div class="card card-grey">
                 <h3>iPhone 16 Pro Max</h3>
                 <img class="product_image" src="https://www.imagineonline.store/cdn/shop/files/iPhone_16_Pro_Max_Natural_Titanium_PDP_Image_Position_1__en-IN_76cf3262-ae6a-46aa-880f-d00b0b0dd8b1.jpg" alt="iPhone Image">
                 <p>Price: $1868</p>
                 <div class="quantity">
-                    <button onclick="updateCart('iPhone', 1299, 'decrement')">-</button>
-                    <input type="number" id="iPhone-quantity" value="0" min="0" onchange="manualUpdate('iPhone', 1299)">
-                    <button onclick="updateCart('iPhone', 1299, 'increment')">+</button>
+                    <button onclick="updateCart('iPhone', 1868, 'decrement')">-</button>
+                    <input type="number" id="iPhone-quantity" value="0" min="0" onchange="manualUpdate('iPhone', 1868)">
+                    <button onclick="updateCart('iPhone', 1868, 'increment')">+</button>
                 </div>
             </div>
             <div class="card card-red">
@@ -105,14 +115,144 @@
                     <button onclick="updateCart('Concert', 1000000, 'increment')">+</button>
                 </div>
             </div>
-            <div class="card card-blue">
-                <h3>Private Concert with Super Star</h3>
-                <img class="product_image" src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D" alt="Concert Image">
-                <p>Price: $15,000,000</p>
+            <div class="card card-red">
+                <h3>Private Island</h3>
+                <img class="product_image" src="https://www.privateislandsonline.com/uploads/resize/_2975_6233821a02bca.jpg-1360-1100.jpg" alt="Private_Island">
+                <p>Price: $75,000,000</p>
                 <div class="quantity">
-                    <button onclick="updateCart('Concert', 1000000, 'decrement')">-</button>
-                    <input type="number" id="Concert-quantity" value="0" min="0" onchange="manualUpdate('Concert', 1000000)">
-                    <button onclick="updateCart('Concert', 1000000, 'increment')">+</button>
+                    <button onclick="updateCart('PrivateIsland', 75000000, 'decrement')">-</button>
+                    <input type="number" id="PrivateIsland-quantity" value="0" min="0" onchange="manualUpdate('PrivateIsland', 75000000)">
+                    <button onclick="updateCart('PrivateIsland', 75000000, 'increment')">+</button>
+                </div>
+            </div>
+            <div class="card card-red">
+                <h3>Superyacht</h3>
+                <img class="product_image" src="https://media.architecturaldigest.com/photos/578fc8d5dd9e6852504f59c0/16:9/w_2240,c_limit/this-could-be-one-worlds-largest-superyachts-01.png" alt="Superyachts">
+                <p>Price: $8,000,000</p>
+                <div class="quantity">
+                    <button onclick="updateCart('Superyacht', 8000000, 'decrement')">-</button>
+                    <input type="number" id="Superyacht-quantity" value="0" min="0" onchange="manualUpdate('Superyacht', 8000000)">
+                    <button onclick="updateCart('Superyacht', 8000000, 'increment')">+</button>
+                </div>
+            </div>
+            <div class="card card-red">
+                <h3>Art Collections</h3>
+                <img class="product_image" src="https://www.virtosuart.com/images/2019/dvv_collection.jpg" alt="Artcollections">
+                <p>Price: $2,000,000</p>
+                <div class="quantity">
+                    <button onclick="updateCart('Artcollections', 2000000, 'decrement')">-</button>
+                    <input type="number" id="Artcollections-quantity" value="0" min="0" onchange="manualUpdate('Artcollections', 2000000)">
+                    <button onclick="updateCart('Artcollections', 2000000, 'increment')">+</button>
+                </div>
+            </div>
+            <div class="card card-red">
+                <h3>Fund the GDP of country</h3>
+                <img class="product_image" src="https://www.countryreports.org/new-index-assets/images/hp-container-one-map.png" alt="Fund_countries">
+                <p>Price: $250,000,000</p>
+                <div class="quantity">
+                    <button onclick="updateCart('FundCountry', 250000000, 'decrement')">-</button>
+                    <input type="number" id="FundCountry-quantity" value="0" min="0" onchange="manualUpdate('FundCountry', 250000000)">
+                    <button onclick="updateCart('FundCountry', 250000000, 'increment')">+</button>
+                </div>
+            </div>
+            <div class="card card-red">
+                <h3>Buy X</h3>
+                <img class="product_image" src="https://img.freepik.com/free-vector/new-2023-twitter-logo-x-icon-design_1017-45418.jpg?semt=ais_hybrid" alt="X">
+                <p>Price: $44,000,000,000</p>
+                <div class="quantity">
+                    <button onclick="updateCart('X', 44000000000, 'decrement')">-</button>
+                    <input type="number" id="X-quantity" value="0" min="0" onchange="manualUpdate('X', 44000000000)">
+                    <button onclick="updateCart('X', 44000000000, 'increment')">+</button>
+                </div>
+            </div>
+            <div class="card card-red">
+                <h3>Funding political movements</h3>
+                <img class="product_image" src="https://ichef.bbci.co.uk/news/1536/cpsprodpb/AED4/production/_133565744_us-elec-guide-976-header-nc.png.webp" alt="funding-political-movement">
+                <p>Price: $1,000,000,000</p>
+                <div class="quantity">
+                    <button onclick="updateCart('funding-political-movement', 1000000000, 'decrement')">-</button>
+                    <input type="number" id="funding-political-movement-quantity" value="0" min="0" onchange="manualUpdate('funding-political-movement', 1000000000)">
+                    <button onclick="updateCart('funding-political-movement', 1000000000, 'increment')">+</button>
+                </div>
+            </div>
+            <div class="card card-red">
+                <h3>Mansion</h3>
+                <img class="product_image" src="https://images.unsplash.com/photo-1505843513577-22bb7d21e455?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mansion">
+                <p>Price: $500,000,000</p>
+                <div class="quantity">
+                    <button onclick="updateCart('Mansion', 500000000, 'decrement')">-</button>
+                    <input type="number" id="Mansion-quantity" value="0" min="0" onchange="manualUpdate('Mansion', 500000000)">
+                    <button onclick="updateCart('Mansion', 500000000, 'increment')">+</button>
+                </div>
+            </div>
+            <div class="card card-red">
+                <h3>Movie Studio</h3>
+                <img class="product_image" src="https://img.freepik.com/premium-photo/scenes-film-studio-lights-camera-action-captured-professional-cinematography-equipment-use-movie-set-design-operation-revealed-ai_372197-19418.jpg?w=2000" alt="MovieStudio">
+                <p>Price: $120,000,000</p>
+                <div class="quantity">
+                    <button onclick="updateCart('MovieStudio', 120000000, 'decrement')">-</button>
+                    <input type="number" id="MovieStudio-quantity" value="0" min="0" onchange="manualUpdate('MovieStudio', 120000000)">
+                    <button onclick="updateCart('MovieStudio', 120000000, 'increment')">+</button>
+                </div>
+            </div>
+            <div class="card card-red">
+                <h3>Moon Tour</h3>
+                <img class="product_image" src="https://c2.staticflickr.com/6/5816/21903482502_fc73442406_k.jpg" alt="Moon">
+                <p>Price: $25,000,000</p>
+                <div class="quantity">
+                    <button onclick="updateCart('MoonTour', 25000000, 'decrement')">-</button>
+                    <input type="number" id="MoonTour-quantity" value="0" min="0" onchange="manualUpdate('MoonTour', 25000000)">
+                    <button onclick="updateCart('MoonTour', 25000000, 'increment')">+</button>
+                </div>
+            </div>
+            <div class="card card-red">
+                <h3>Private Jet</h3>
+                <img class="product_image" src="https://aeroaffaires.com/wp-content/uploads/2021/02/airforce-one-768x432.jpeg" alt="PJ">
+                <p>Price: $660,000,000</p>
+                <div class="quantity">
+                    <button onclick="updateCart('PrivateJet', 660000000, 'decrement')">-</button>
+                    <input type="number" id="PrivateJet-quantity" value="0" min="0" onchange="manualUpdate('PrivateJet', 660000000)">
+                    <button onclick="updateCart('PrivateJet', 660000000, 'increment')">+</button>
+                </div>
+            </div>
+            <div class="card card-red">
+                <h3>Kohinoor</h3>
+                <img class="product_image" src="https://en.channeliam.com/wp-content/uploads/2024/07/What_is_Kohinoor_Diamond_90b8aa7.webp" alt="Kohinoor">
+                <p>Price: $660,000,000</p>
+                <div class="quantity">
+                    <button onclick="updateCart('Kohinoor', 20000000000, 'decrement')">-</button>
+                    <input type="number" id="Kohinoor-quantity" value="0" min="0" onchange="manualUpdate('Kohinoor', 20000000000)">
+                    <button onclick="updateCart('Kohinoor', 20000000000, 'increment')">+</button>
+                </div>
+            </div>
+            <div class="card card-red">
+                <h3>jacob&co</h3>
+                <img class="product_image" src="https://hautetime.s3.us-west-1.amazonaws.com/wp-content/uploads/2015/03/26135031/Jacob-Co-18-Million-Billionaire-Watch-BaselWorld-2015-13.jpg" alt="jacob">
+                <p>Price: $18,000,000</p>
+                <div class="quantity">
+                    <button onclick="updateCart('jacob&co', 18000000, 'decrement')">-</button>
+                    <input type="number" id="jacob&co-quantity" value="0" min="0" onchange="manualUpdate('jacob&co', 18000000)">
+                    <button onclick="updateCart('jacob&co', 18000000, 'increment')">+</button>
+                </div>
+            </div>
+            <div class="card card-red">
+                <h3>Graff Diamonds Hallucination</h3>
+                <img class="product_image" src="https://superwatchman.com/wp-content/uploads/2020/11/123767790_803326067122144_5804607300493656538_n.jpg" alt="Graff Diamonds Hallucination">
+                <p>Price: $55,000,000</p>
+                <div class="quantity">
+                    <button onclick="updateCart('GraffDiamondsHallucination', 55000000, 'decrement')">-</button>
+                    <input type="number" id="GraffDiamondsHallucination-quantity" value="0" min="0" onchange="manualUpdate('GraffDiamondsHallucination', 55000000)">
+                    <button onclick="updateCart('GraffDiamondsHallucination', 55000000, 'increment')">+</button>
+                </div>
+            </div>
+            <div class="card card-red">
+                <h3>Space Mission</h3>
+                <img class="product_image" src="https://cdn.mos.cms.futurecdn.net/tsRQNTJ8MhRUm32taXTdjm-1200-80.jpg.webp" alt="Graff Diamonds Hallucination">
+                <p>Price: $5,000,000,000</p>
+                <div class="quantity">
+                    <button onclick="updateCart('SpaceMission', 5000000000, 'decrement')">-</button>
+                    <input type="number" id="SpaceMission-quantity" value="0" min="0" onchange="manualUpdate('SpaceMission', 5000000000)">
+                    <button onclick="updateCart('SpaceMission', 5000000000, 'increment')">+</button>
                 </div>
             </div>
         </div>
@@ -142,6 +282,19 @@
             <button onclick="toggleCart()">Close</button>
         </div>
     </div>
+
+    <footer class="footer">
+        <div class="footer-item">
+            <p>Contact us: <a href="mailto:spendbillionairesfortune@gmail.com">spendbillionairesfortune@gmail.com</a></p>
+        </div>
+        <div class="footer-item">
+            <p>Need extra item? <a href="https://forms.gle/3ocaaVL9nMn6ZQxr9" target="_blank">Google Form</a></p>
+        </div>
+        <div class="footer-item">
+            <p><a href="./privacy_policy.html">Privacy Policy</a></p>
+        </div>
+    </footer>
+    
 
     <script src="script.js"></script>
 </body>
